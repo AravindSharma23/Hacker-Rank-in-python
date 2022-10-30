@@ -3,10 +3,11 @@ Super reduced string
 
 """
 s="aaabccddd"
-stack=[]
-for char in s:
-    if stack and char  == stack[-1]:
+def Super_Reduced(s):
+   stack=[]
+   for char in s:
+     if stack and char  == stack[-1]:
         stack.pop()
-    else:
+     else:
         stack.append(char)
-print("".join(stack))
+   return "Empty String " if len(stack) == 0 else return "".join(stack)
